@@ -11,6 +11,6 @@ function getBalance(){
 }
 
 function setBalance(value){
-     document.getElementById('balance').innerText = newBalance;
-     balance.innerText = value;
+     document.getElementById('balance').innerText = value;
+  
 }
