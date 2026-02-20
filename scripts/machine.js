@@ -21,10 +21,12 @@ function showOnly(id){
     
     const addMoney = document.getElementById('add-money');
     const cashout = document.getElementById('cashout');
+    const transfer = document.getElementById('transfer');
     const history = document.getElementById('history');
 
     addMoney.classList.add('hidden');
     cashout.classList.add('hidden');
+    transfer.classList.add('hidden');
     history.classList.add('hidden');
 
 
@@ -36,7 +38,6 @@ function showOnly(id){
 // customize time
 
 function currentTime(){
-
 
 const now = new Date();
 
