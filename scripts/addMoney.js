@@ -21,8 +21,6 @@ document.getElementById('add-money-btn').addEventListener('click' , function(){
 
     const pin = getValueFromInput('add-money-pin')
     if(pin == '1234'){
-        alert(`Add Money Success from ${bankAccount} 
-            at ${new Date()})`);
       setBalance(newBalance);
 
 
@@ -34,14 +32,33 @@ document.getElementById('add-money-btn').addEventListener('click' , function(){
 
       // 3 - new div innerHtml add korbo
 
+      const { time, date } = currentTime();
       newHistory.innerHTML = `
-      <div class="transaction-card p-5 bg-base-100">
+  
+    <div class="transaction-card p-5 bg-base-100  rounded-lg mb-4">
 
-       Add Money Success from ${bankAccount}, acc-no ${accno},  at ${new Date()}) 
+         <div class="payment-card flex gap-3">
+
+            <div class="bg-base-300 p-3 rounded-full">
+                <img src="./assets/opt-1.png" alt="">
+            </div>
+
+            <div>
+                <h3>Add Money ${amount}TK , <span> from : ${accno}</span></h3>
+                <span>Today ${time}</span>
+                <span>Date: ${date}</span>
+            </div>
+         </div>
             
      </div>
+
+     
       
       `;
+
+
+
+
 
       // 4 history container e newDiv appen korbo
       history.append(newHistory);

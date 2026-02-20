@@ -31,3 +31,23 @@ function showOnly(id){
     const selected = document.getElementById(id);
     selected.classList.remove('hidden');
 }
+
+
+// customize time
+
+function currentTime(){
+
+
+const now = new Date();
+
+const time = now.toLocaleTimeString('en-US' , {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true
+});
+
+const date = now.toLocaleDateString('en-GB');
+
+return {time, date};
+
+}
